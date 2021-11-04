@@ -102,6 +102,8 @@ function createRecipeCards() {
   const page = recipeData[recipes[0]]['page-name'];
   router.addPage(page, function() {
     document.querySelector('.section--recipe-cards').classList.add('shown');
+    document.querySelector('.section--recipe-cards').classList.remove('shown');
+    document.querySelector('.section--recipe-expand').classList.add('shown');
     document.querySelector('.section--recipe-expand').classList.remove('shown');
     document.querySelector('recipe-expand').data = recipeData[recipes[0]];
   });
