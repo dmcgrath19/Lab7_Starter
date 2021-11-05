@@ -70,13 +70,15 @@ export class Router {
      if (this[page]){
       this[page]();
       if(!statePopped){
-          let hash = page == 'home'? ' ':(location.hash)+'#'+page;
-          history.pushState({page: page}, "", hash);
+        let hash = '';
+        if (hash != 'home')
+          hash = (location.hash)+'#'+page; 
+        history.pushState({page: page}, "", hash);
       }
   }
-  else {
-      console.log('function is not exist');
-  }
+  else
+      console.log('Error');
+
     
   
 
