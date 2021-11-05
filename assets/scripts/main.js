@@ -183,8 +183,8 @@ function bindEscKey() {
    * page. This will let us go back to the home page from the detailed page.
    */
    document.addEventListener('keydown', event =>{
-    if(event.key == "Escape")
-      router.navigate('home', false);
+    if(event.key == 'Escape')
+      router.navigate("home");
   });
 }
 
@@ -209,9 +209,7 @@ function bindPopstate() {
    */
 
    window.addEventListener('popstate', event =>{
-    if(event.state)
-      router.navigate(event.state, true);
-    else
-      router.navigate('home', true);
+    if(history.state)
+      router.navigate(history.state['page'], true);
   });
 }

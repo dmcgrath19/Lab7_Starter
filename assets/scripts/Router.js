@@ -68,13 +68,13 @@ export class Router {
      *  4. Finally, call the stored function for the given page
      */
     if(this[page]){
-      this[page]();
       let hash = '';
       if(page != 'home')
         hash = '#' + page;
       if(!statePopped && window.location.hash != hash){
         history.pushState({page: page}, "", (location.hash) + hash);
       }
+      this[page]();
     }
     else
       console.error('Page Not Found.');
