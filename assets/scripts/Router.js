@@ -38,7 +38,7 @@ export class Router {
      * router instance using the 'this' keyword. Substitute 'home' for the variable
      * page
      */
-      this['page'] = pageFunc;
+      this[page] = pageFunc;
 
   }
 
@@ -70,13 +70,14 @@ export class Router {
     if(this){
       let hash = '';
       if(page != 'home')
-        hash = `#${page}`;
+        hash = '#' + page;
       if(!statePopped && window.location.hash != hash)
         history.pushState();
       this;
     }
     else{
       console.error('Page Not Found.');
+      return;
     }
 
   }
