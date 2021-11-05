@@ -68,7 +68,7 @@ export class Router {
      *  4. Finally, call the stored function for the given page
      */
      if (this[page] == null){
-      console.log('function is not exist');
+      console.log('Function does not exist.');
       return;
      }
      let hash = page == 'home'? '': '#' + page;
