@@ -71,7 +71,7 @@ export class Router {
       console.log('Function does not exist');
       return;
      }
-     let hash = page == 'home'? '': ('#' + page);
+     let hash = page == 'home'? ' ': ('#' + page);
      
     if(!statePopped && window.location.hash != hash){
 
