@@ -71,7 +71,7 @@ export class Router {
       this[page]();
       if(!statePopped){
         let hash = '';
-        if (hash != 'home')
+        if (page != 'home')
           hash = (location.hash)+'#'+page; 
         history.pushState({page: page}, "", hash);
       }
