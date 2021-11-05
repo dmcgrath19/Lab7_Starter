@@ -184,7 +184,7 @@ function bindEscKey() {
    */
    document.addEventListener('keydown', event =>{
     if(event.key == 'Escape')
-      router.navigate("home");
+      router.navigate('home');
   });
 }
 
@@ -211,5 +211,7 @@ function bindPopstate() {
    window.addEventListener('popstate', event =>{
     if(history.state)
       router.navigate(history.state['page'], true);
+    else 
+      router.navigate('home', true);
   });
 }
