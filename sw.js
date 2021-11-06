@@ -8,14 +8,14 @@ const urlsToCache = [
   './assets/scripts/main.js',
   './assets/scripts/Router.js',
   './assets/components/RecipeCard.js',
-  './assets/components/RecipeExpand.js',
-  './assets/images/icons/0-star.svg',
-  './assets/images/icons/1-star.svg',
-  './assets/images/icons/2-star.svg',
-  './assets/images/icons/3-star.svg',
-  './assets/images/icons/4-star.svg',
-  './assets/images/icons/5-star.svg',
-  './assets/images/icons/arrow-down.png',
+  './assets/components/RecipeExpand.js'
+  // './assets/images/icons/0-star.svg',
+  // './assets/images/icons/1-star.svg',
+  // './assets/images/icons/2-star.svg',
+  // './assets/images/icons/3-star.svg',
+  // './assets/images/icons/4-star.svg',
+  // './assets/images/icons/5-star.svg',
+  // './assets/images/icons/arrow-down.png',
 ];
 
 // Once the service worker has been installed, feed it some initial URLs to cache
