@@ -3,12 +3,12 @@
 
 const CACHE_NAME = 'lab-7-starter';
 const urlsToCache = [
-  'index.html',
-  '/assets/styles/main.css',
-  '/assets/scripts/main.js',
-  '/assets/scripts/Router.js',
-  '/assets/components/RecipeCard.js',
-  '/assets/components/RecipeExpand.js'
+  // 'index.html',
+  'assets/styles/main.css',
+  'assets/scripts/main.js',
+  'assets/scripts/Router.js',
+  'assets/components/RecipeCard.js',
+  'assets/components/RecipeExpand.js'
   // './assets/images/icons/0-star.svg',
   // './assets/images/icons/1-star.svg',
   // './assets/images/icons/2-star.svg',
@@ -29,6 +29,7 @@ self.addEventListener('install', function (event) {
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
+        console.log(urlsToCache);
         return cache.addAll(urlsToCache);
       })
   );
@@ -44,8 +45,8 @@ self.addEventListener('activate', function (event) {
    * TODO - Part 2 Step 3
    * Create a function as outlined above, it should be one line
    */
-  console.log("Claimed.");
   event.waitUntil(clients.claim());
+  console.log("Activated and clients claimed.");
 });
 
 // Intercept fetch requests and store them in the cache
@@ -60,6 +61,7 @@ self.addEventListener('fetch', function (event) {
       .then(function(response) {
         // Cache hit - return response
         if (response) {
+          console.log("Cache hit, returning response.");
           return response;
         }
 
@@ -80,7 +82,8 @@ self.addEventListener('fetch', function (event) {
               .then(function(cache) {
                 cache.put(event.request, responseToCache);
               });
-
+            
+            console.log("Cache miss, returning response.");  
             return response;
           }
         );
