@@ -3,12 +3,12 @@
 
 const CACHE_NAME = 'lab-7-starter';
 const urlsToCache = [
-  './index.html',
-  './assets//styles/main.css',
-  './assets/scripts/main.js',
-  './assets/scripts/Router.js',
-  './assets/components/RecipeCard.js',
-  './assets/components/RecipeExpand.js'
+  'index.html',
+  'assets//styles/main.css',
+  'assets/scripts/main.js',
+  'assets/scripts/Router.js',
+  'assets/components/RecipeCard.js',
+  'assets/components/RecipeExpand.js'
   // './assets/images/icons/0-star.svg',
   // './assets/images/icons/1-star.svg',
   // './assets/images/icons/2-star.svg',
