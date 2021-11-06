@@ -5,7 +5,7 @@ const CACHE_NAME = 'lab-7-starter';
 const urlsToCache = [
   // '/',
   // 'index.html',
-  // 'favicon.ico',
+  'favicon.ico',
   // 'assets/styles/main.css',
   // 'assets/scripts/main.js',
   // 'assets/scripts/Router.js',
@@ -75,7 +75,7 @@ self.addEventListener('fetch', function (event) {
 
         return fetch(event.request).then(
           function(response) {
-            // Check if we received a valid response
+            // Check if we received a valid response, this breaks everything. Do not uncomment.
             // if(!response || response.status !== 200) {
               // return response;
             // }
