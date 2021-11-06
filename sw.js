@@ -8,7 +8,8 @@ const urlsToCache = [
   './assets/scripts/main.js',
   './assets/scripts/Router.js',
   './assets/components/RecipeCard.js',
-  './assets/components/RecipeExpand.js'
+  './assets/components/RecipeExpand.js',
+  './assets/images/icons'
 ];
 
 // Once the service worker has been installed, feed it some initial URLs to cache
